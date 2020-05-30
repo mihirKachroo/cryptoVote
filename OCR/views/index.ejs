@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Verification</title>
+        <link href="https://fonts.googleapis.com/css?family=Helvetica" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            color: #fff;
+            background: linear-gradient(-45deg, #EE7752, rgb(147, 210, 233), rgb(143, 206, 191), rgb(117, 130, 202));
+            background-size: 400% 400%;
+            position: relative;
+            animation: change 10s ease-in-out infinite;
+        }
+        @keyframes change{
+            0%{
+                background-position: 0 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0 50%;
+            }
+        }
+        input[type="file"]{
+            display: none;
+        }
+        label{
+            color: white;
+            height: 60px;
+            width: 250px;
+            background-color: #f5af09;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Montserrat", sans-serif;
+        }
+        .button {
+            color: white;
+            height: 60px;
+            width: 250px;
+            background-color: #f5af09;
+            position: absolute;
+            margin: auto;
+            top: 200px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Montserrat", sans-serif;
+        }
+        .button2 {
+            background-color: #008CBA;       
+        } /* Blue */
+    </style>
+    <body>
+        <h1 style="color: black;"><center>Verification</center></h1>
+        <center>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="avatar" id="file">
+            <label for="file">
+                <span class="material-icons">
+                    add_photo_alternate
+                    </span>
+                Choose a Photo
+            </label>
+
+            <button type="submit" class="button button2">Convert</button>
+        </form>
+        </center>
+    </body>
+</html>
