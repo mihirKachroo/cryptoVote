@@ -25,8 +25,8 @@ export default class Profile extends Component {
     render() {
         const mystyle = {
             position: 'absolute',
-            top: 10,
-            right: 0,
+            top: 7,
+            right: 20,
         };
         const {handleSignOut, userSession} = this.props;
         const {person} = this.state;
@@ -34,11 +34,12 @@ export default class Profile extends Component {
             !userSession.isSignInPending() ?
                 <div className="panel-welcome" id="section-2">
 
-                    <h1>Pick Your Vote</h1>
+                    <h1 style={{position: "absolute", top:125, left:"40%", right: "40%"}}>Pick Your Vote</h1>
                     <p className="lead">
                         <div style={mystyle}>
 
                             <button
+                            style={{fontSize: 25}}
                                 className="btn btn-primary btn-lg"
                                 id="signout-button"
                                 onClick={handleSignOut.bind(this)}

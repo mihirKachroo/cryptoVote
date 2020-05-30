@@ -10,19 +10,20 @@ class HoverPage extends React.Component {
     render() {
         const voteButtonStyle = {
             position: "absolute",
-            top: "2%",
-            right: "4.5%",
+            top: 305,
+            right: 35,
             marginLeft: "50px",
             backgroundColor: "red",
-            padding: "20px 50px",
+            padding: "15px 70px",
             align: "center"
         }
         const voteButtonStyle2 = {
             position: "absolute",
-            left: "35%",
+            top: 305,
+            left: 382,
             marginLeft: "50px",
-            backgroundColor: "red",
-            padding: "20px 50px"
+            backgroundColor: "blue",
+            padding: "15px 70px"
         }
         function VoteJustin(e) {
             e.preventDefault()
