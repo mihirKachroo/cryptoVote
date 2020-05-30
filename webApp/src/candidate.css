@@ -1,41 +1,58 @@
-
 .container {
-    position: relative;
-    width: 50%;
-}
+    position: absolute;
+  }
 
-.image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.overlay {
+  .img__wrap {
+    position: absolute;
+    right: 0;
+    height: 315px;
+    width: 250px;
+  }
+  
+  .img__description {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
+    background: rgba(204,0,0,0.2);
+    color: #fff;
+    visibility: hidden;
     opacity: 0;
-    transition: .5s ease;
-    background-color: #008CBA;
-    margin: 0 auto;
-    width: 40%; /* Or some other width */
-}
-
-.container:hover .overlay {
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .img__wrap:hover .img__description {
+    visibility: visible;
     opacity: 1;
-}
+  }
 
-.text {
-    color: white;
-    font-size: 20px;
+  
+  .img__wrap2 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
+    left: 35%;
+    height: 315px;
+    width: 250px;
+  }
+  
+  .img__description2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(29, 106, 154, 0.72);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .img__wrap2:hover .img__description2 {
+    visibility: visible;
+    opacity: 1;
+  }

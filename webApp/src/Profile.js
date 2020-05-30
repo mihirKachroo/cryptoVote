@@ -34,7 +34,7 @@ export default class Profile extends Component {
             !userSession.isSignInPending() ?
                 <div className="panel-welcome" id="section-2">
 
-                    <h1>Hello, <span id="heading-name">{person.name() ? person.name() : 'Nameless Person'}</span>!</h1>
+                    <h1>Pick Your Vote</h1>
                     <p className="lead">
                         <div style={mystyle}>
 
