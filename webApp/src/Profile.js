@@ -23,6 +23,11 @@ export default class Profile extends Component {
   }
 
   render() {
+    const mystyle = {
+      position: 'absolute',
+    top: 10,
+    right: 0, 
+    };
     const { handleSignOut, userSession } = this.props;
     const { person } = this.state;
     return (
@@ -31,6 +36,8 @@ export default class Profile extends Component {
 
         <h1>Hello, <span id="heading-name">{ person.name() ? person.name() : 'Nameless Person' }</span>!</h1>
         <p className="lead">
+        <div style={mystyle}>
+
           <button
             className="btn btn-primary btn-lg"
             id="signout-button"
@@ -38,6 +45,7 @@ export default class Profile extends Component {
           >
             Logout
           </button>
+      </div>
         </p>
         
 <Candidates/>
