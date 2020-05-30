@@ -4,7 +4,9 @@ import Data from './component'
 
 function App() {
     return (
-        <Data/>
+        <div style={{backgroundColor: "#FF033E"}}>
+            <Data/>
+        </div>
     );
 }
 

@@ -44,14 +44,20 @@ export default class Data extends React.Component {
     }
 
     render() {
+        const whiteFont = {
+            color: "white"
+        }
+
         this.findWinner()
         return (
             <div className="App">
-                <div className={"Title"}>
-                    
+                <div className={"Title"} style={whiteFont}>
+                    <h1>United States of America Federal Elections</h1>
                 </div>
-                <h2>Total Votes for Joseph Biden: {this.state.biden}</h2>
-                <h2>Total Votes for Donald Trump: {this.state.biden}</h2>
+                <div style={whiteFont}>
+                    <h2>Total Votes for Joseph Biden: {this.state.biden}</h2>
+                    <h2>Total Votes for Donald Trump: {this.state.trump}</h2>
+                </div>
             </div>
         )
     }
