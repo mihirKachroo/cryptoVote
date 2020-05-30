@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Profile from './Profile.js';
+import Signin from './Signin.js';
+import {
+  UserSession,
+  AppConfig
+} from 'blockstack';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const appConfig = new AppConfig()
+const userSession = new UserSession({ appConfig: appConfig })
+
+export default class App extends Component {
+
+
+  handleSignIn(e) {
+    e.preventDefault();
+    userSession.redirectToSignIn();
+  }
+
+  handleSignOut(e) {
+    e.preventDefault();
+    userSession.signUserOut(window.location.origin);
+  }
+
+  render() {
+    return (
+      <div className="site-wrapper">
+        <div className="site-wrapper-inner">
+          { !userSession.isUserSignedIn() ?
+            <Signin userSession={userSession} handleSignIn={ this.handleSignIn } />
+            : <Profile userSession={userSession} handleSignOut={ this.handleSignOut } />
+          }
+        </div>
+      </div>
+    );
+  }
+
+  componentDidMount() {
+    if (userSession.isSignInPending()) {
+      userSession.handlePendingSignIn().then((userData) => {
+        window.history.replaceState({}, document.title, "/")
+        this.setState({ userData: userData})
+      });
+    }
+  }
 }
-
-export default App;
