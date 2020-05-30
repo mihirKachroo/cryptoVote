@@ -8,7 +8,7 @@ const cors = require('cors')
 const routes = require('./routes')
 
 const app = express()
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 1234;
 const mongooseURI = 'mongodb+srv://BillBai:SecurePassword@cluster0-tikzh.mongodb.net/test?retryWrites=true&w=majority'
 
 app.use(bodyParser.json())

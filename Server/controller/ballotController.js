@@ -1,6 +1,8 @@
 Ballot = require('../models/ballotModel')
 
 exports.createBallot = async function (req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
     const{ voterName, voterID, votedFor } = req.query
 
     let ballot = Ballot()

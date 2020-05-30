@@ -5,13 +5,13 @@
 // and hidden.
 // https://facebook.github.io/create-react-app/docs/proxying-api-requests-in-development
 
-module.exports = function(app) {
-  app.get('/manifest.json', (req, res, next) => {
-    res.set({
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': '*',
-      'Access-Control-Allow-Methods': 'GET'
-    });
-    next();
-  })
+module.exports = function (app) {
+    app.get('/manifest.json', (req, res, next) => {
+        res.set({
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': '*',
+            'Access-Control-Allow-Methods': 'GET'
+        });
+        next();
+    })
 };

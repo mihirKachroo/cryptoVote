@@ -2,33 +2,33 @@
 .container {
     position: relative;
     width: 50%;
-  }
-  
-  .image {
+}
+
+.image {
     display: block;
     width: 100%;
     height: auto;
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     height: 100%;
-    opacity: 0; 
+    opacity: 0;
     transition: .5s ease;
     background-color: #008CBA;
     margin: 0 auto;
     width: 40%; /* Or some other width */
-  }
-  
-  .container:hover .overlay {
+}
+
+.container:hover .overlay {
     opacity: 1;
-  }
-  
-  .text {
+}
+
+.text {
     color: white;
     font-size: 20px;
     position: absolute;
@@ -38,4 +38,4 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-  }
+}
