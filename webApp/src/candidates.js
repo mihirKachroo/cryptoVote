@@ -99,7 +99,11 @@ class HoverPage extends React.Component {
   <img style={{width: "250px", height: "300px"}} class="img__img" src={Justin} />
   <p class="img__description2"><br/><br/><b>Joe Biden.</b><br/> Leader of the Democratic Party. The Democratic Party values egalitarianism, social equality (gay marriage, black rights, LGBTQ+ rights), protecting the environment, and strengthening the social safety net through liberalism.</p>
 </div>
+<<<<<<< HEAD
 <button style={voteButtonStyle2} onClick={this.VoteBiden.bind(this)}>Vote!</button>
+=======
+<button style={voteButtonStyle2} onClick={VoteJustin}>Vote!</button>
+>>>>>>> parent of 7cbff3ac... fsd
 
 <div class="img__wrap">
   <img style={{width: "250px", height: "300px"}} class="img__img" src={Trump} />

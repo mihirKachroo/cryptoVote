@@ -34,7 +34,7 @@ export default class Profile extends Component {
             !userSession.isSignInPending() ?
                 <div className="panel-welcome" id="section-2">
 
-                    <h1 style={{position: "absolute", top:125, left:"30%", right: "30%"}}>Select Your Candidate</h1>
+                    <h1 style={{position: "absolute", top:125, left:"40%", right: "40%"}}>Select Your Candidate</h1>
                     <p className="lead">
                         <div style={mystyle}>
 
@@ -50,7 +50,6 @@ export default class Profile extends Component {
                     </p>
 
                     <Candidates/>
-                    <a href={"http://localhost:5000/"}> <h4 style={{color:"blue", position: "absolute", top:550, left:"30%", right: "30%", textColor: "blue"}}>Verify Your Account</h4></a>
                 </div> : null
         );
     }
