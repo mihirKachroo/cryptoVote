@@ -38,7 +38,8 @@ app.post('/upload', (req,res) => {
             })
             .then(result => {
                 isValid = ((req.file.originalname === "correctusvoterid.jpg") ? true : false)
-                res.send("Please wait for redirect...");
+                res.send("Please wait... "+result.text);
+
                 if (isValid){
                     console.log('Yes')
                 } else {
