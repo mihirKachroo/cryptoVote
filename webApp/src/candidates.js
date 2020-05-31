@@ -7,6 +7,38 @@ const request = require('request')
 
 
 class HoverPage extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            color: "blue"
+        }
+    }
+
+    VoteBiden(e) {
+        e.preventDefault()
+        console.log('hi')
+
+        let name = "Bill Bai"
+        let voterID = "12341234"
+        let voteFor = "Joe Biden"
+
+        request.post(
+            'http://localhost:1234/POST-Ballot?voterName=' +
+            name +
+            '&voterID=' +
+            voterID +
+            '&votedFor=' +
+            voteFor
+        )
+
+        this.setState({
+            color: "green"
+        })
+    }
+
+
     render() {
         const voteButtonStyle = {
             position: "absolute",
@@ -17,34 +49,16 @@ class HoverPage extends React.Component {
             padding: "15px 70px",
             align: "center",
             color: "white",
-            
         }
         const voteButtonStyle2 = {
             position: "absolute",
             top: 305,
             left: 382,
             marginLeft: "50px",
-            backgroundColor: "blue",
+            backgroundColor: this.state.color,
             padding: "15px 70px",
             color: "white",
 
-        }
-        function VoteJustin(e) {
-            e.preventDefault()
-            console.log('hi')
-            
-            let name = "Bill Bai" // Change this
-            let voterID = "12341234" // Change this
-            let voteFor = "Joe Biden"
-
-            request.post(
-                'http://localhost:1234/POST-Ballot?voterName=' +
-                name +
-                '&voterID=' +
-                voterID +
-                '&votedFor=' +
-                voteFor
-            )
         }
 
         function VoteTrump(e) {
@@ -85,7 +99,7 @@ class HoverPage extends React.Component {
   <img style={{width: "250px", height: "300px"}} class="img__img" src={Justin} />
   <p class="img__description2"><br/><br/><b>Joe Biden.</b><br/> Leader of the Democratic Party. The Democratic Party values egalitarianism, social equality (gay marriage, black rights, LGBTQ+ rights), protecting the environment, and strengthening the social safety net through liberalism.</p>
 </div>
-<button style={voteButtonStyle2} onClick={VoteJustin}>Vote!</button>
+<button style={voteButtonStyle2} onClick={this.VoteBiden.bind(this)}>Vote!</button>
 
 <div class="img__wrap">
   <img style={{width: "250px", height: "300px"}} class="img__img" src={Trump} />

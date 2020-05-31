@@ -50,6 +50,8 @@ export default class Profile extends Component {
                     </p>
 
                     <Candidates/>
+
+                    <button> Final Vote </button>
                 </div> : null
         );
     }
