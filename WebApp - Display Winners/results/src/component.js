@@ -23,7 +23,7 @@ export default class Data extends React.Component {
 
                 for (let key in Object.keys(body)) {
                     let temp = body[key].votedFor
-                    if (temp === "Justin Trudeau") {
+                    if (temp === "Joseph Biden") {
                         bidenVotes += 1
                     } else if (temp === "Donald Trump") {
                         trumpVotes += 1
