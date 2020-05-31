@@ -79,13 +79,13 @@ class HoverPage extends React.Component {
 
 <div class="img__wrap2">
   <img style={{width: "250px", height: "300px"}} class="img__img" src={Justin} />
-  <p class="img__description2">Joe Biden. Leader of the Democratic party.</p>
+  <p class="img__description2"><br/><br/><b>Joe Biden.</b><br/> Leader of the Democratic Party. The Democratic Party values egalitarianism, social equality (gay marriage, black rights, LGBTQ+ rights), protecting the environment, and strengthening the social safety net through liberalism.</p>
 </div>
 <button style={voteButtonStyle2} onClick={VoteJustin}>Vote!</button>
 
 <div class="img__wrap">
   <img style={{width: "250px", height: "300px"}} class="img__img" src={Trump} />
-  <p class="img__description">Donald Trump. Leader of the Republican party.</p>
+  <p class="img__description"><br/><br/><b>Donald Trump.</b><br/> Leader of the Republican Party. <br/>The Republican Party values traditional values, small government, deregulation of the government, economic liberalism, and free trade, as the fundamental traits of democracy</p>
 </div>
 <button style={voteButtonStyle} onClick={VoteTrump}>Vote!</button>
 

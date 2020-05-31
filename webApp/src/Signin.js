@@ -7,7 +7,7 @@ export default class Signin extends Component {
 
         return (
             <div className="panel-landing" id="section-1">
-                <h1 className="landing-heading">Election App!</h1>
+                <h1 className="landing-heading">cryptoVote</h1>
                 <p className="lead">
                     <button
                         className="btn btn-primary btn-lg"
