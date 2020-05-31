@@ -7,11 +7,6 @@
         "key" : "Access-Control-Allow-Origin",
         "value" : "*"
       }]
-    }],
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
+    }]
   }
 }
