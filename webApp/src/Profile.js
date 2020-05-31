@@ -49,8 +49,8 @@ export default class Profile extends Component {
                         </div>
                     </p>
 
-                    <Candidates/>
-                    <a href={"http://localhost:5000/"}> <h4 style={{color:"blue", position: "absolute", top:550, left:"30%", right: "30%", textColor: "blue"}}>Verify Your Account</h4></a>
+                    <a href={"http://localhost:5000/"} target={"_blank"}> <h4 style={{color:"blue", position: "absolute", top:550, left:"30%", right: "30%", textColor: "blue"}}>Verify Your Account</h4></a>
+                    <a href={"http://localhost:3001/"}> <Candidates/> </a>
                 </div> : null
         );
     }
