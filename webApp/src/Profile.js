@@ -34,7 +34,7 @@ export default class Profile extends Component {
             !userSession.isSignInPending() ?
                 <div className="panel-welcome" id="section-2">
 
-                    <h1 style={{position: "absolute", top:125, left:"40%", right: "40%"}}>Pick Your Vote</h1>
+                    <h1 style={{position: "absolute", top:125, left:"40%", right: "40%"}}>Select Your Candidate</h1>
                     <p className="lead">
                         <div style={mystyle}>
 
