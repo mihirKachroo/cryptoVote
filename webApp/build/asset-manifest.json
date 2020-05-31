@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d333b982.chunk.css",
+    "main.js": "/static/js/main.92e31c19.chunk.js",
+    "main.js.map": "/static/js/main.92e31c19.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.74189dbb.chunk.css": "/static/css/2.74189dbb.chunk.css",
+    "static/js/2.02bea18e.chunk.js": "/static/js/2.02bea18e.chunk.js",
+    "static/js/2.02bea18e.chunk.js.map": "/static/js/2.02bea18e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e2ca298ed125bf8e81642e3e0688935d.js": "/precache-manifest.e2ca298ed125bf8e81642e3e0688935d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.74189dbb.chunk.css.map": "/static/css/2.74189dbb.chunk.css.map",
+    "static/css/main.d333b982.chunk.css.map": "/static/css/main.d333b982.chunk.css.map",
+    "static/media/biden2.jpg": "/static/media/biden2.f6a66893.jpg",
+    "static/media/trump2.jpg": "/static/media/trump2.9a4462a6.jpg"
+  }
+}
