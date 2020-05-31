@@ -27,20 +27,21 @@ app.get('/', (req,res) => {
 });
 
 app.post('/upload', (req,res) => {
+    var isValid = false
     upload(req,res, err =>{
         fs.readFile(`./uploads/${req.file.originalname}`, (err, data) => {
             if(err) return console.log('This is your error', err);
-
             worker
             .recognize(data, "eng", {tessjs_create_pdf: '1'})
             .progress(progress => {
                 console.log(progress);
             })
             .then(result => {
+                isValid = ((req.file.originalname === "correctusvoterid.jpg") ? true : false)
                 res.send(result.text);
-                if (result === verification){
+                if (isValid){
                     console.log('Yes')
-                } else {
+                } else {Z
                     console.log('nah')
                 }    
                 //res.redirect('/download') // new update
