@@ -104,6 +104,9 @@ class HoverPage extends React.Component {
 =======
 <button style={voteButtonStyle2} onClick={VoteJustin}>Vote!</button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 7cbff3ac... fsd
+=======
 >>>>>>> parent of 7cbff3ac... fsd
 =======
 >>>>>>> parent of 7cbff3ac... fsd
