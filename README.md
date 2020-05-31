@@ -12,7 +12,7 @@ Hackathon Project For Massey Hacks 2020
 
 * [Blockstack](https://blockstack.org/) 
 * [Gaia Storage](https://github.com/blockstack/gaia)
-* [React Native](https://reactnative.dev/) 
+* [React Js](https://reactnative.dev/) 
 * [Node.js](https://nodejs.org)
 * [Tesseract](https://tesseract.projectnaptha.com/) 
 * [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
