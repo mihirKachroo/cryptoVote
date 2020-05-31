@@ -5,6 +5,7 @@ const fs = require("fs");
 const multer = require("multer");
 const { TesseractWorker } = require("tesseract.js")
 const worker = new TesseractWorker();
+var verification = "DEPARTMENT OF STATE SY C FOR VOTING PURPOSES ONLY F = o' FRANCESCA SAMPLE p i DOB: 0112/1967 oo) & Issue Date: 01/12/2012 | w SB Expiration Date: 01/31/2022 2 7 4 CONFIRMED REGISTERED VOTER & RZ AS OF ISSUE DATE Yomeoca Sample 99 999 999";
 
 //storage
 const storage = multer.diskStorage({
@@ -37,6 +38,11 @@ app.post('/upload', (req,res) => {
             })
             .then(result => {
                 res.send(result.text);
+                if (result === verification){
+                    console.log('Yes')
+                } else {
+                    console.log('nah')
+                }    
                 //res.redirect('/download') // new update
             })
             .finally(() => worker.terminate());
